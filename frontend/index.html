@@ -3,66 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Note</title>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
+        .btn-edit {
+            background-color: yellow;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        .btn-hapus {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
-<body>
-    <h1>Daftar Catatan</h1>
-    <form>
-        <span>
-            <label for="judul">Judul</label>
-            <input 
-                data-id
-                id="judul"
-                type="text"
-                placeholder="Masukkan judul"
-                required
-                />
-        </span>
-        <span style="margin-left: 1rem">
-            <label for="isi">Isi</label>
-            <input 
-                data-id
-                id="isi"
-                type="text"
-                placeholder="Masukkan catatan"
-                required
-                />
-        </span>
-        <span style="margin-left: 1rem">
-            <label for="kategori">Kategori</label>
-            <input 
-                data-id
-                id="kategori"
-                type="text"
-                placeholder="Masukkan kategori"
-                required
-                />
-        </span>
-        <button type="submit">Buat Catatan</button>
-    </form>
-    <main style="margin-top: 1rem">
-        <table>
-            <thead>
-            <tr>
-                <th>No</th>
-                <th>Judul</th>
-                <th>Isi</th>
-                <th>Kategori</th>
-                <th colspan="2">Action</th>
-            </tr>
-            </thead>
-            <tbody id="table-catatan"></tbody>
-        </table>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="index.js"></script>
+<body style="background-color: #2d6a6a; padding: 20px; color: white;">
+    <div style="display: flex; gap: 2rem;">
+        <div style="flex: 1;">
+            <h2 style="color: white;">Buat Catatan</h2>
+            <form>
+                <span>
+                    <label for="judul">Judul</label>
+                    <textarea 
+                        data-id
+                        id="judul"
+                        type="text"
+                        placeholder="Masukkan judul"
+                        required
+                        style="display: block; width: 100%; height: 50px;"
+                    ></textarea>
+                </span>
+                <span style="margin-top: 1rem; display: block;">
+                    <label for="isi">Isi</label>
+                    <textarea 
+                        data-id
+                        id="isi"
+                        type="text"
+                        placeholder="Masukkan catatan"
+                        required
+                        style="display: block; width: 100%; height: 100px;"
+                    ></textarea>
+                </span>
+                <span style="margin-top: 1rem; display: block;">
+                    <label for="kategori">Kategori</label>
+                    <textarea 
+                        data-id
+                        id="kategori"
+                        type="text"
+                        placeholder="Masukkan kategori"
+                        required
+                        style="display: block; width: 100%; height: 50px;"
+                    ></textarea>
+                </span>
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Simpan</button>
+            </form>
+        </div>
+
+        <div style="flex: 2;">
+            <h2>Daftar Catatan</h2>
+            <main style="margin-top: 1rem">
+                <table <table class="table table-success table-bordered table-hover">
+                    <thead style="text-align: center;">
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Kategori</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-catatan"></tbody>
+                </table>
+            </main>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script src="index.js"></script>
+        </div>
+    </div>
 </body>
 </html>
