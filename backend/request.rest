@@ -1,0 +1,55 @@
+
+GET http://localhost:5000/notes
+
+
+###
+POST http://localhost:5000/buat-catatan
+Content-Type: application/json
+
+{
+    "judul" : "Rencana Kegiatan Mingguan",
+    "isi" : "Minggu ini saya akan menyelesaikan laporan proyek menghadiri rapat dengan tim dan mempelajari konsep baru tentang IoT Target utama adalah menyelesaikan dokumentasi sebelum hari Jumat",
+    "kategori" : "Kegiatan"
+}
+###
+POST http://localhost:5000/buat-catatan
+Content-Type: application/json
+
+{
+    "judul" : "Ide Pengembangan Sistem Keamanan Jaringan",
+    "isi" : "Saya ingin menambahkan fitur notifikasi ke sistem keamanan Arduino menggunakan modul WiFi ESP8266 agar bisa mengirim peringatan ke ponsel. Perlu mencari referensi dan melakukan uji coba.",
+    "kategori" : "Jaringan"
+}
+
+###
+POST http://localhost:5000/buat-catatan
+Content-Type: application/json
+
+{
+    "judul" : "Pemrograman GUI di MATLAB",
+    "isi" : "Hari ini saya mencoba membuat GUI sederhana untuk menangkap gambar dari webcam menggunakan MATLAB. Tantangan utama adalah memastikan kompatibilitas driver dengan perangkat yang digunakan.",
+    "kategori" : "Pemrograman"
+}
+
+###
+POST http://localhost:5000/buat-catatan
+Content-Type: application/json
+
+{
+    "judul" : " Konsep Dasar Kriptografi",
+    "isi" : "Kriptografi melibatkan teknik enkripsi dan dekripsi untuk menjaga keamanan data. Salah satu algoritma dasar adalah Caesar Cipher, yang menggeser huruf dalam alfabet berdasarkan kunci tertentu.",
+    "kategori" : "Keamanan Data"
+}
+
+###
+PUT http://localhost:5000/edit-catatan/3
+Content-Type: application/json
+
+{
+    "judul" : "Pemrograman GUI di Python",
+    "isi" : "Hari ini saya mencoba membuat GUI sederhana untuk menangkap gambar dari webcam menggunakan Python. Tantangan utama adalah memastikan kompatibilitas driver dengan perangkat yang digunakan.",
+    "kategori" : "Pemrograman"
+}
+
+###
+delete http://localhost:5000/hapus-catatan/4

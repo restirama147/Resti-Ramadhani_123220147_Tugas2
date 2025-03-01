@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Catatan</h1>
+    <form>
+        <span>
+            <label for="judul">Judul</label>
+            <input 
+                data-id
+                id="judul"
+                type="text"
+                placeholder="Masukkan judul"
+                required
+                />
+        </span>
+        <span style="margin-left: 1rem">
+            <label for="isi">Isi</label>
+            <input 
+                data-id
+                id="isi"
+                type="text"
+                placeholder="Masukkan catatan"
+                required
+                />
+        </span>
+        <span style="margin-left: 1rem">
+            <label for="kategori">Kategori</label>
+            <input 
+                data-id
+                id="kategori"
+                type="text"
+                placeholder="Masukkan kategori"
+                required
+                />
+        </span>
+        <button type="submit">Buat Catatan</button>
+    </form>
+    <main style="margin-top: 1rem">
+        <table>
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Isi</th>
+                <th>Kategori</th>
+                <th colspan="2">Action</th>
+            </tr>
+            </thead>
+            <tbody id="table-catatan"></tbody>
+        </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
