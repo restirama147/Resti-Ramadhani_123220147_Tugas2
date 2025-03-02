@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2025 at 05:03 AM
+-- Generation Time: Mar 01, 2025 at 08:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,9 +41,12 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`id`, `judul`, `isi`, `kategori`, `Tanggal_dibuat`, `Tanggal_diupdate`) VALUES
-(1, 'Rencana Kegiatan Mingguan', 'Minggu ini saya akan menyelesaikan laporan proyek menghadiri rapat dengan tim dan mempelajari konsep baru tentang IoT Target utama adalah menyelesaikan dokumentasi sebelum hari Jumat', 'Kegiatan', '2025-02-28 03:04:49', '2025-02-28 03:04:49'),
+(1, 'Rencana Kegiatan Mingguan', 'Minggu ini saya akan menyelesaikan laporan proyek menghadiri rapat dengan tim dan mempelajari konsep baru tentang IoT Target utama adalah menyelesaikan dokumentasi sebelum hari Jumat', 'Kegiatan harian', '2025-02-28 03:04:49', '2025-03-01 07:17:54'),
 (2, 'Ide Pengembangan Sistem Keamanan', 'Saya ingin menambahkan fitur notifikasi ke sistem keamanan Arduino menggunakan modul WiFi ESP8266 agar bisa mengirim peringatan ke ponsel. Perlu mencari referensi dan melakukan uji coba.', 'Teknologi', '2025-02-28 03:11:16', '2025-02-28 03:11:16'),
-(3, 'Pemrograman GUI di Python', 'Hari ini saya mencoba membuat GUI sederhana untuk menangkap gambar dari webcam menggunakan Python. Tantangan utama adalah memastikan kompatibilitas driver dengan perangkat yang digunakan.', 'Pemrograman', '2025-02-28 03:11:20', '2025-02-28 03:12:31');
+(3, 'Pemrograman GUI di Python', 'Hari ini saya mencoba membuat GUI sederhana untuk menangkap gambar dari webcam menggunakan Python. Tantangan utama adalah memastikan kompatibilitas driver dengan perangkat yang digunakan.', 'Pemrograman', '2025-02-28 03:11:20', '2025-02-28 03:12:31'),
+(5, 'Ide Pengembangan Sistem Keamanan Jaringan', 'Saya ingin menambahkan fitur notifikasi ke sistem keamanan Arduino menggunakan modul WiFi ESP8266 agar bisa mengirim peringatan ke ponsel. Perlu mencari referensi dan melakukan uji coba.', 'Jaringan', '2025-03-01 04:53:12', '2025-03-01 04:53:12'),
+(6, 'mancing', 'aku mau mancing ke danau', 'kegiatan', '2025-03-01 05:02:14', '2025-03-01 05:02:14'),
+(8, 'Evaluasi Proyek Pergudangan', 'Perlu meninjau kembali progres pengembangan aplikasi pergudangan. Fokus pada efektivitas metode Scrum, kendala yang dihadapi, dan strategi untuk meningkatkan kolaborasi tim.', 'Manajemen Proyek', '2025-03-01 06:55:30', '2025-03-01 06:55:30');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +66,7 @@ ALTER TABLE `notes`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
